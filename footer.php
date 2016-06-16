@@ -1,1 +1,10 @@
-<?php wp_footer(); ?>
+<?php 
+/*
+
+@package ramettatheme
+
+*/
+
+wp_footer(); 
+
+?>
