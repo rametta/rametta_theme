@@ -15,7 +15,7 @@ add_action('admin_menu', 'rametta_add_admin_page');
 function rametta_add_admin_page() {
 	// rametta admin page
 	add_menu_page('Rametta Theme Options', 'Rametta', 'manage_options', 'rametta', 'rametta_theme_create_page', get_template_directory_uri() . '/img/rametta-admin-icon.svg', 80);
-
+	
 	// rametta admin submenu pages
 	add_submenu_page('rametta', 'Rametta Theme Options', 'Settings', 'manage_options', 'rametta', 'rametta_theme_create_page');
 	add_submenu_page('rametta', 'Rametta Style Options', 'Style', 'manage_options', 'rametta_style', 'rametta_theme_settings_page');
