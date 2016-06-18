@@ -35,6 +35,7 @@ function rametta_theme_style_page() {
 }
 
 function rametta_custom_settings() {
+	register_setting( 'rametta-settings-group', 'profile_picture' );
 	register_setting( 'rametta-settings-group', 'first_name' );
 	register_setting( 'rametta-settings-group', 'last_name' );
 	register_setting( 'rametta-settings-group', 'user_description' );
@@ -44,6 +45,7 @@ function rametta_custom_settings() {
 
 	add_settings_section( 'rametta-sidebar-options', 'Sidebar Options', 'rametta_sidebar_options', 'rametta' );
 
+	add_settings_field( 'sidebar-profile-picture', 'Profile Picture', 'rametta_sidebar_profile', 'rametta', 'rametta-sidebar-options' );
 	add_settings_field( 'sidebar-name', 'Full Name', 'rametta_sidebar_name', 'rametta', 'rametta-sidebar-options' );
 	add_settings_field( 'sidebar-description', 'Short Description', 'rametta_sidebar_description', 'rametta', 'rametta-sidebar-options' );
 	add_settings_field( 'sidebar-twitter', 'Twitter handle', 'rametta_sidebar_twitter', 'rametta', 'rametta-sidebar-options' );
@@ -53,6 +55,11 @@ function rametta_custom_settings() {
 
 function rametta_sidebar_options() {
 	echo '<p>Customize your sidebar settings</p>';
+}
+
+function rametta_sidebar_profile() {
+	$picture = esc_attr( get_option( 'profile_picture' ) );
+	echo '<input type="button" value="Upload Profile Picture" id="upload-button" class="button button-secondary" /><input type="hidden" id="profile-picture" name="profile_picture" value="'. $picture .'" />';
 }
 
 function rametta_sidebar_name() {

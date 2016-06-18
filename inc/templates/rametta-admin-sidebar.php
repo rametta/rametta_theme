@@ -13,6 +13,7 @@
 
 <div class="rametta-sidebar-preview">
 	<div class="rametta-sidebar">
+		<img src="">
 		<h1 class="rametta-username"><?php print $fullName; ?></h1>
 		<h2 class="rametta-description"><?php print $description; ?></h2>
 		<div class="icon-wrapper">
