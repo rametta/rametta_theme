@@ -1,0 +1,40 @@
+/*
+
+@package ramettatheme
+
+	========================
+	ADMIN CSS STYLES
+	========================
+
+*/
+
+/* Only applies to the Settings admin page */
+.rametta-general-form,
+.rametta-sidebar-preview {
+    display: inline-block;
+    float: left;
+}
+.rametta-sidebar-preview {
+    width: 280px;
+    background-color: #1f1f1f;
+    padding: 20px;
+    text-align: center;
+    margin-right: 20px;
+}
+.rametta-sidebar {
+    display: block;
+    text-align: center;
+}
+h1.rametta-username,
+h2.rametta-description {
+    font-weight: 100;
+    color: #fff;
+}
+h1.rametta-username {
+    font-size: 24px;
+    margin: 0 0 10px;
+}
+h2.rametta-description {
+    font-size: 13px;
+    margin: 0 0 20px;
+}
